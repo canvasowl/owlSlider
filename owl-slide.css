@@ -1,0 +1,23 @@
+@import url("css/animate.css") screen;
+
+/* Typography */
+.owl-slider h3{ font-size: 1.9em; }
+.owl-slider p{ font-size: 1.3em; }
+
+
+/* Global */
+.owl-slider hr{max-width: 50%; margin-left: 0;}
+
+.owl-slider .btn-cta{
+	background-color: tomato;
+	border-radius: 2px;
+	padding: 15px;
+	color: #fff;
+	font-size: 1.3em;
+	text-transform: capitalize;
+	-webkit-transition-duration: .2s;
+	-moz-transition-duration: .2s;
+	-o-transition-duration: .2s;
+	transition-duration: .2s;
+}
+.owl-slider .btn-cta:hover{text-decoration: none; opacity: .8;}
