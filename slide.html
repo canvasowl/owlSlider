@@ -2,19 +2,60 @@
 <html>
 <head>
 	<title></title>
-
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="owl-slide.css">
 </head>
 <body>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 
-<div class="owl-slider">
-	<div>Onee</div>
-	<div>Two</div>
-	<div>Three</div>
-	<div>Four</div>
+<div class="container">
+	
+	<div class="row">
+		<div class="col-sm-12">
+			
+			<!-- START -->
+			<div class="owl-slider">
+				<div class="animated fadeInUp">
+					<h3>This is the slider title 1</h3>
+					<p>
+						This will be the cool message that will be displayed by the
+						slider.
+					</p>
+					<hr>			
+					<a class="btn-cta" href="">This will be CTA button</a>
+				</div>
+
+				<div class="animated">
+					<h3>This is the slider title 2</h3>
+					<p>
+						This will be the cool message that will be displayed by the
+						slider.
+					</p>
+					<hr>			
+					<a class="btn-cta" href="">This will be CTA button</a>
+				</div>
+
+				<div class="animated">
+					<h3>This is the slider title 3</h3>
+					<p>
+						This will be the cool message that will be displayed by the
+						slider.
+					</p>
+					<hr>			
+					<a class="btn-cta" href="">This will be CTA button</a>
+				</div>				
+
+			</div>
+			<!-- END -->
+
+		</div>
+	</div>
+
 </div>
+
+
 
 
 <script type="text/javascript">	
@@ -30,7 +71,8 @@
 	 * Hide all owl-slider and how the next one 
 	 */
 	setInterval(function () {	
-		$('.owl-slider div').hide().fadeOut('slow');		
+		$('.owl-slider div').removeClass("fadeInUp");
+		$('.owl-slider div:eq('+i+')').hide();	
 		
 		if (i == num_of_slides -1) {
 			i = 0;
@@ -38,8 +80,8 @@
 			i++;
 		};
 
-		$('.owl-slider div:eq('+i+')').show();
+		$('.owl-slider div:eq('+i+')').show().addClass("fadeInUp");
 		
-	}, 2000);
+	}, 5000);
 </script>
 </html>
